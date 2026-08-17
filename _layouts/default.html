@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+<body class="{{ page.body_class | default: 'index-page' }}">
+
+  {% unless page.show_header == false %}
+    {% include header.html %}
+  {% endunless %}
+  <main class="main">
+{{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
+</body>
+
+</html>

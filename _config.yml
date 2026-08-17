@@ -1,0 +1,15 @@
+title: "Total Pest Control"
+url: "https://www.totalpestcontrol.us"
+baseurl: "/"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      body_class: index-page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

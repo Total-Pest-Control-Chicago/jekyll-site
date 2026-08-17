@@ -1,0 +1,54 @@
+---
+layout: "default"
+title: "404 - Constructify Bootstrap Template"
+body_class: "page-404"
+permalink: "/404.html"
+active_nav: "error-404"
+---
+
+{% include page-title.html title="404" current="404" %}
+
+    <!-- Error 404 Section -->
+    <section id="error-404" class="error-404 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="error-visual">
+              <div class="glitch-wrapper">
+                <span class="digit digit-left">4</span>
+                <span class="digit digit-circle">
+                  <i class="bi bi-emoji-dizzy"></i>
+                </span>
+                <span class="digit digit-right">4</span>
+              </div>
+              <div class="decorative-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div><!-- End Error Visual -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="error-info">
+              <span class="error-badge">Error 404</span>
+              <h2>We can't seem to find the page you're looking for</h2>
+              <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+              <ul class="suggestions">
+                <li><i class="bi bi-check-circle"></i> Verify the URL is typed correctly</li>
+                <li><i class="bi bi-check-circle"></i> Return to the main page and navigate again</li>
+                <li><i class="bi bi-check-circle"></i> Reach out to our support team for help</li>
+              </ul>
+              <div class="action-buttons">
+                <a href="{{ '/' | relative_url }}" class="btn-home"><i class="bi bi-house-door"></i> Back to Home</a>
+                <a href="{{ '/#contact' | relative_url }}" class="btn-support"><i class="bi bi-headset"></i> Get Assistance</a>
+              </div>
+            </div>
+          </div><!-- End Error Info -->
+        </div>
+
+      </div>
+
+    </section><!-- /Error 404 Section -->
