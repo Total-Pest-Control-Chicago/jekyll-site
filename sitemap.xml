@@ -25,6 +25,11 @@ permalink: "/sitemap.xml"
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>{{ site.url }}/estimate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>{{ site.url }}/services/insect-exterminator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -60,7 +65,7 @@ permalink: "/sitemap.xml"
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/terms</loc>
+    <loc>{{ site.url }}/accessibility</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

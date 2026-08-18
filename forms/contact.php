@@ -21,7 +21,7 @@
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  $contact->subject = !empty($_POST['subject']) ? $_POST['subject'] : 'New Contact Form Message';
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -36,6 +36,7 @@
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   isset($_POST['phone']) && $contact->add_message($_POST['phone'], 'Phone');
+  isset($_POST['service']) && $contact->add_message($_POST['service'], 'Pest Problem');
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();

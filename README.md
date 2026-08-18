@@ -28,4 +28,4 @@ Jekyll conversion of the New Total Pest Control website (Constructify Bootstrap 
 - Home page, header, and footer are branded for Total Pest Control per `design-inspo.png`; the hero uses the real `hero-image.png`, but the about/services/CTA photos are still stock Constructify construction imagery — replace with real pest control photos
 - Subpages (`terms`, `privacy`, `service-details`, `project-details`, `starter-page`, `404`) still carry stock Constructify copy
 - Confirm the production domain in `_config.yml` (currently `https://www.totalpestcontrol.us`, taken from the design's email address)
-- `forms/contact.php` requires the pro "PHP Email Form" library and a real receiving email address (design says info@totalpestcontrol.us)
+- `forms/contact.php` is unused — the contact and estimate forms now submit directly to Formspree

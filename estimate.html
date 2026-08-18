@@ -1,26 +1,32 @@
 ---
 layout: "default"
-title: "Contact Us | Total Pest Control - Chicago Exterminators"
-body_class: "contact-page"
-description: "Contact Total Pest Control for a free pest control estimate in Chicago and the suburbs. Call 773-338-3918 — same-day service available, open 7 days a week."
-permalink: "/contact/"
-active_nav: "contact"
+title: "Free Estimate | Total Pest Control - Chicago Exterminators"
+body_class: "estimate-page"
+description: "Request a free pest control estimate from Total Pest Control. Serving Chicago and the suburbs with same-day service, seven days a week. Call 773-338-3918."
+permalink: "/estimate/"
+active_nav: "estimate"
 ---
 
-{% include page-title.html title="Contact Us" current="Contact" %}
+{% include page-title.html title="Free Estimate" current="Free Estimate" %}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- Estimate Section -->
+    <section id="estimate" class="contact section">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Contact Total Pest Control Chicago</h2>
-        <p>Get a free pest control estimate today — same-day service available across Chicago and the suburbs, seven days a week</p>
+        <h2>Request a Free Pest Control Estimate</h2>
+        <p>Tell us about your pest problem and we'll get back to you with clear, affordable pricing — same-day service available across Chicago and the suburbs, seven days a week</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
+
+          <div class="col-lg-8 order-lg-last">
+            <div class="contact-form-wrap">
+              {% include estimate-form.html %}
+            </div>
+          </div>
 
           <div class="col-lg-4">
             <div class="info-cards">
@@ -58,14 +64,8 @@ active_nav: "contact"
             </div>
           </div>
 
-          <div class="col-lg-8">
-            <div class="contact-form-wrap">
-              {% include contact-form.html %}
-            </div>
-          </div>
-
         </div>
 
       </div>
 
-    </section><!-- /Contact Section -->
+    </section><!-- /Estimate Section -->

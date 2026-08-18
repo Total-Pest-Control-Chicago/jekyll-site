@@ -216,6 +216,31 @@ h6 {
   background: color-mix(in srgb, var(--accent-color) 90%, black);
 }
 
+.header .btn-call-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 24px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.header .btn-call-header:hover {
+  background: color-mix(in srgb, var(--accent-color) 90%, black);
+  color: var(--contrast-color);
+}
+
+.header .btn-call-header i {
+  font-size: 15px;
+  line-height: 0;
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -226,6 +251,11 @@ h6 {
     order: 2;
     margin-right: 12px;
     padding: 10px 20px;
+  }
+
+  .header .btn-call-header {
+    order: 2;
+    margin-right: 12px;
   }
 
   .header .header-actions {
@@ -487,6 +517,32 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+
+  .navmenu .btn-call-mobile,
+  .navmenu .btn-call-mobile:focus {
+    margin: 12px 20px 8px 20px;
+    padding: 12px 24px;
+    border-radius: 24px;
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    justify-content: center;
+  }
+
+  .navmenu .btn-call-mobile:hover {
+    background: color-mix(in srgb, var(--accent-color) 90%, black);
+    color: var(--contrast-color);
+  }
+
+  .navmenu .btn-call-mobile i,
+  .navmenu .btn-call-mobile:focus i {
+    background-color: transparent;
+    color: var(--contrast-color);
+    width: auto;
+    height: auto;
+    margin-left: 0;
+    margin-right: 8px;
+    font-size: 15px;
   }
 }
 
@@ -1214,7 +1270,7 @@ section,
 }
 
 .services .services-image .image-overlay .overlay-link {
-  color: var(--accent-color);
+  color: var(--contrast-color);
   font-weight: 600;
   font-size: 14px;
   display: inline-flex;

@@ -16,7 +16,7 @@
             <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
             <li><a href="{{ '/services/' | relative_url }}">Pest Control Services</a></li>
             <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-            <li><a href="{{ '/terms/' | relative_url }}">Terms of Service</a></li>
+            <li><a href="{{ '/accessibility/' | relative_url }}">Accessibility</a></li>
             <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
           </ul>
         </div>
@@ -38,15 +38,18 @@
           <p>Chicago, Illinois</p>
           <p>Serving Chicagoland &amp; Suburbs</p>
           <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span><a href="tel:+17733383918">773-338-3918</a> &amp; <a href="tel:+18474241521">847-424-1521</a></span></p>
-          <p><strong>Email:</strong> <span>info@totalpestcontrol.us</span></p>
+          <p class="mt-4"><strong>Phone:</strong> <span><a href="tel:+17733383918">773-338-3918</a></span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Total Pest Control</strong> <span>All Rights Reserved</span></p>
+      <p>© <span id="year"></span> <strong class="px-1 sitename">Total Pest Control</strong> <span>All Rights Reserved</span></p>
     </div>
+    <script>
+      document.getElementById('year').textContent =
+        new Date().getFullYear();
+    </script>
 
   </footer>

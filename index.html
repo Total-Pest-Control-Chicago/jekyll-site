@@ -16,12 +16,11 @@ active_nav: "home"
       <div class="container position-relative">
         <div class="row">
           <div class="col-lg-8">
-            <span class="badge-label"><i class="bi bi-bug"></i> Chicago's Trusted Pest Control Experts — Open 7 Days a Week</span>
             <h1>Same-Day Pest Control &amp; Exterminator Service in Chicago</h1>
             <p class="lead">Total Pest Control delivers guaranteed pest removal across Chicagoland and the suburbs — bed bugs, termites, rodents, ants, roaches, spiders, bees, wasps, and wildlife. Child and pet safe treatments, affordable prices, and no contract required. You'll never have to worry about uninvited guests in your home again.</p>
             <div class="hero-actions d-flex flex-wrap gap-3">
               <a href="tel:+17733383918" class="btn-main">Call Now: 773-338-3918</a>
-              <a href="{{ '/contact/' | relative_url }}" class="btn-outline">Request Free Estimate <i class="bi bi-arrow-right"></i></a>
+              <a href="{{ '/estimate/' | relative_url }}" class="btn-outline">Request Free Estimate <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@ active_nav: "home"
               </div>
 
               <div class="about-cta">
-                <a href="{{ '/contact/' | relative_url }}" class="btn-about">Get a Free Pest Inspection <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ '/estimate/' | relative_url }}" class="btn-about">Get a Free Pest Inspection <i class="bi bi-arrow-right"></i></a>
                 <a href="{{ '/services/' | relative_url }}" class="btn-about-outline">Explore Our Services</a>
               </div>
             </div>
@@ -157,7 +156,7 @@ active_nav: "home"
               <img src="{{ '/assets/img/construction/showcase-7.webp' | relative_url }}" alt="" class="img-fluid">
               <div class="image-overlay">
                 <h3>Total Pest Control &amp; Extermination — Guaranteed</h3>
-                <a href="{{ '/contact/' | relative_url }}" class="overlay-link">Get a Free Pest Control Estimate <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ '/estimate/' | relative_url }}" class="overlay-link">Get a Free Pest Control Estimate <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -342,7 +341,7 @@ active_nav: "home"
                 <i class="bi bi-chat-dots"></i>
               </div>
               <h3>Free Consultation</h3>
-              <p>Call 773-338-3918 or 847-424-1521 and describe your pest problem. We offer free estimates and same-day appointments, seven days a week.</p>
+              <p>Call 773-338-3918 and describe your pest problem. We offer free estimates and same-day appointments, seven days a week.</p>
             </div>
           </div><!-- End Step -->
 
@@ -618,7 +617,7 @@ active_nav: "home"
               </div>
 
               <div class="action-row">
-                <a href="{{ '/contact/' | relative_url }}" class="btn-get-started">
+                <a href="{{ '/estimate/' | relative_url }}" class="btn-get-started">
                   <span>Request a Free Estimate</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -678,31 +677,11 @@ active_nav: "home"
 
               <div class="info-card d-flex align-items-start gap-3">
                 <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div>
-                  <h4>Service Area</h4>
-                  <p>Chicago, IL<br>Serving all of Chicagoland &amp; Suburbs</p>
-                </div>
-              </div><!-- End Info Card -->
-
-              <div class="info-card d-flex align-items-start gap-3">
-                <div class="icon-box">
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div>
                   <h4>Call Us Now</h4>
-                  <p><a href="tel:+17733383918">773-338-3918</a><br><a href="tel:+18474241521">847-424-1521</a></p>
-                </div>
-              </div><!-- End Info Card -->
-
-              <div class="info-card d-flex align-items-start gap-3">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div>
-                  <h4>Email Us</h4>
-                  <p>info@totalpestcontrol.us</p>
+                  <p><a href="tel:+17733383918">773-338-3918</a></p>
                 </div>
               </div><!-- End Info Card -->
 
@@ -716,48 +695,22 @@ active_nav: "home"
                 </div>
               </div><!-- End Info Card -->
 
+              <div class="info-card d-flex align-items-start gap-3">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <h4>Service Area</h4>
+                  <p>Chicago, IL<br>Serving all of Chicagoland &amp; Suburbs</p>
+                </div>
+              </div><!-- End Info Card -->
+
             </div>
           </div>
 
           <div class="col-lg-8">
             <div class="contact-form-wrap">
-              <form action="{{ '/forms/contact.php' | relative_url }}" method="post" class="php-email-form">
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" autocomplete="name">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="" autocomplete="email">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" autocomplete="tel">
-                  </div>
-                  <div class="col-md-6">
-                    <select name="service" class="form-control" required="">
-                      <option value="" disabled="" selected="">Select a Pest Problem</option>
-                      <option value="insects">Ants, Roaches &amp; Other Insects</option>
-                      <option value="bed-bugs">Bed Bugs</option>
-                      <option value="termites">Termites</option>
-                      <option value="rodents">Mice &amp; Rats</option>
-                      <option value="wildlife">Wildlife (Raccoons, Squirrels, Bats)</option>
-                      <option value="bees-wasps">Bees &amp; Wasps</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-                  <div class="col-12">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="">
-                  </div>
-                  <div class="col-12">
-                    <textarea name="message" class="form-control" rows="5" placeholder="Describe your pest problem — what you've seen, where, and for how long..." required=""></textarea>
-                  </div>
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit" class="btn-submit">Get My Free Estimate</button>
-                  </div>
-                </div>
-              </form>
+              {% include contact-form.html %}
             </div>
           </div>
 
