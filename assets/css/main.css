@@ -23,7 +23,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #37423b; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0f2a44; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #14331c; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0d7118; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -47,10 +47,10 @@
 }
 
 .dark-background {
-  --background-color: #0f1f2e;
+  --background-color: #0e2413;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #223040;
+  --surface-color: #1b3a23;
   --contrast-color: #ffffff;
 }
 
@@ -147,7 +147,7 @@ h6 {
 .header {
   --background-color: rgba(255, 255, 255, 0.9);
   --default-color: #37423b;
-  --heading-color: #0f2a44;
+  --heading-color: #14331c;
   background: color-mix(in srgb, var(--background-color) 92%, transparent);
   padding: 16px 0;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color) 10%, transparent);
@@ -676,15 +676,6 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -4097,4 +4088,47 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+/*--------------------------------------------------------------
+# Call To Action Dark Green Legibility
+--------------------------------------------------------------*/
+.call-to-action.dark-background .info-block .tagline {
+  color: #7ddc8a;
+  background: color-mix(in srgb, #7ddc8a, transparent 88%);
+}
+
+.call-to-action.dark-background .highlight-cards .highlight-card .card-icon {
+  background: color-mix(in srgb, #7ddc8a, transparent 85%);
+}
+
+.call-to-action.dark-background .highlight-cards .highlight-card .card-icon i {
+  color: #7ddc8a;
+}
+
+.call-to-action.dark-background .highlight-cards .highlight-card:hover .card-icon {
+  background: var(--accent-color);
+}
+
+.call-to-action.dark-background .highlight-cards .highlight-card:hover {
+  border-left-color: #7ddc8a;
+}
+
+.call-to-action.dark-background .action-row .phone-block .phone-icon {
+  border-color: color-mix(in srgb, #7ddc8a, transparent 45%);
+}
+
+.call-to-action.dark-background .action-row .phone-block .phone-icon i {
+  color: #7ddc8a;
+}
+
+.call-to-action.dark-background .action-row .phone-block .phone-details .phone-number:hover {
+  color: #7ddc8a;
+}
+
+.call-to-action.dark-background .image-block .accent-badge i {
+  color: #7ddc8a;
+}
+
+.call-to-action.dark-background .action-row .btn-get-started {
+  box-shadow: 0 10px 30px color-mix(in srgb, #000000, transparent 65%);
 }

@@ -10,7 +10,47 @@ permalink: "/sitemap.xml"
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>{{ site.url }}/service-details</loc>
+    <loc>{{ site.url }}/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/insect-exterminator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/termite-control</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/bed-bug-extermination</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/rodent-control</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/wildlife-removal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>{{ site.url }}/services/bee-wasp-removal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

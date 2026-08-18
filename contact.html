@@ -1,0 +1,117 @@
+---
+layout: "default"
+title: "Contact Us | Total Pest Control - Chicago Exterminators"
+body_class: "contact-page"
+description: "Contact Total Pest Control for a free pest control estimate in Chicago and the suburbs. Call 773-338-3918 or 847-424-1521 — same-day service available, open 7 days a week."
+permalink: "/contact/"
+active_nav: "contact"
+---
+
+{% include page-title.html title="Contact Us" current="Contact" %}
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact Total Pest Control Chicago</h2>
+        <p>Get a free pest control estimate today — same-day service available across Chicago and the suburbs, seven days a week</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-cards">
+
+              <div class="info-card d-flex align-items-start gap-3">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <h4>Service Area</h4>
+                  <p>Chicago, IL<br>Serving all of Chicagoland &amp; Suburbs</p>
+                </div>
+              </div><!-- End Info Card -->
+
+              <div class="info-card d-flex align-items-start gap-3">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <h4>Call Us Now</h4>
+                  <p><a href="tel:+17733383918">773-338-3918</a><br><a href="tel:+18474241521">847-424-1521</a></p>
+                </div>
+              </div><!-- End Info Card -->
+
+              <div class="info-card d-flex align-items-start gap-3">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>info@totalpestcontrol.us</p>
+                </div>
+              </div><!-- End Info Card -->
+
+              <div class="info-card d-flex align-items-start gap-3">
+                <div class="icon-box">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div>
+                  <h4>Hours</h4>
+                  <p>Open 7 Days a Week<br>Same-Day Service Available</p>
+                </div>
+              </div><!-- End Info Card -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="contact-form-wrap">
+              <form action="{{ '/forms/contact.php' | relative_url }}" method="post" class="php-email-form">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" autocomplete="name">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="" autocomplete="email">
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" autocomplete="tel">
+                  </div>
+                  <div class="col-md-6">
+                    <select name="service" class="form-control" required="">
+                      <option value="" disabled="" selected="">Select a Pest Problem</option>
+                      <option value="insects">Ants, Roaches &amp; Other Insects</option>
+                      <option value="bed-bugs">Bed Bugs</option>
+                      <option value="termites">Termites</option>
+                      <option value="rodents">Mice &amp; Rats</option>
+                      <option value="wildlife">Wildlife (Raccoons, Squirrels, Bats)</option>
+                      <option value="bees-wasps">Bees &amp; Wasps</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="">
+                  </div>
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Describe your pest problem — what you've seen, where, and for how long..." required=""></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <button type="submit" class="btn-submit">Get My Free Estimate</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
