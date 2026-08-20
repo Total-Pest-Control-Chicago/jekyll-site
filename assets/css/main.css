@@ -241,7 +241,7 @@ h6 {
   line-height: 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   .header .logo {
     order: 1;
     margin-right: auto;
@@ -298,7 +298,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .navmenu {
     padding: 0;
   }
@@ -404,7 +404,7 @@ h6 {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
@@ -782,7 +782,7 @@ section,
   overflow: clip;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
 
   section,
   .section {
