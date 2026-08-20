@@ -1284,6 +1284,7 @@ section,
 }
 
 .services .service-item {
+  position: relative;
   display: flex;
   gap: 16px;
   padding: 24px;
@@ -1325,6 +1326,12 @@ section,
   transition: all 0.3s ease;
 }
 
+.services .service-item .service-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .services .service-item .service-body h4 {
   font-size: 18px;
   font-weight: 600;
@@ -1336,6 +1343,35 @@ section,
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
+}
+
+.services .service-item .service-body .service-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-color);
+  transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.services .service-item .service-body .service-link i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.services .service-item:hover .service-body .service-link {
+  gap: 12px;
+  color: color-mix(in srgb, var(--accent-color), black 12%);
+}
+
+.services .service-item .service-body .service-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 @media (max-width: 991px) {

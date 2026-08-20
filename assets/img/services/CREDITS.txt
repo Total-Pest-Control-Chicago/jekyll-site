@@ -1,0 +1,36 @@
+Service detail page photography
+===============================
+
+All images below are public domain (CC0 1.0) or marked as Public Domain Mark (PDM).
+No attribution is legally required for any of them; this file is kept as a record of
+provenance. Sourced via the Openverse API (openverse.org).
+
+insect-exterminator.html
+  insect-ants-close-up.jpg        CC0  stocksnap.io/photo/ant-insect-5TZY5RGG5N
+  insect-cockroach-indoors.jpg    CC0  inaturalist.org/photos/117431218 (Blattella germanica)
+  insect-clean-kitchen.jpg        CC0  stocksnap.io/photo/house-interior-APBDJIC32G
+
+termite-control.html
+  termite-workers-in-wood.jpg     CC0  inaturalist.org/photos/248800923 (Reticulitermes flavipes)
+  termite-damaged-wood.jpg        CC0  flickr.com/photos/62295966@N07/8229594229
+  termite-protected-home.jpg      CC0  stocksnap.io/photo/house-home-L9VZ6SOGBB
+
+bed-bug-extermination.html
+  bed-bug-on-fabric.jpg           CC0  inaturalist.org/photos/408897280 (Cimex lectularius)
+  bed-bug-clean-bedroom.jpg       CC0  stocksnap.io/photo/bedroom-clean-OE0F9BHXJQ
+  bed-bug-hotel-room.jpg          CC0  stocksnap.io/photo/hotel-bed-XVTMPEYKEE
+
+rodent-control.html
+  rodent-house-mouse.jpg          CC0  commons.wikimedia.org/w/index.php?curid=138402270
+  rodent-brown-rats.jpg           CC0  flickr.com/photos/89918055@N05/24144331648
+  rodent-rat-woodpile.jpg         CC0  flickr.com/photos/44510888@N05/45537278195
+
+wildlife-removal.html
+  wildlife-raccoons-wall.jpg      CC0  flickr.com/photos/51314820@N00/16100340385
+  wildlife-gray-squirrel.jpg      CC0  stocksnap.io/photo/animals-mammals-R00URFFJ6R
+  wildlife-attic-gable-vent.jpg   CC0  stocksnap.io/photo/house-roof-6ZANICCFI9
+
+bee-wasp-removal.html
+  bee-wasp-paper-wasp.jpg         CC0  stocksnap.io/photo/wasp-insect-YPTGP7N8PF
+  bee-wasp-yellow-jacket.jpg      PDM  flickr.com/photos/8895893@N06/54683262414
+  bee-wasp-paper-nest.jpg         PDM  flickr.com/photos/54563451@N08/20386343301
