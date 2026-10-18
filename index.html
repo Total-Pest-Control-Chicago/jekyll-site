@@ -16,10 +16,11 @@ active_nav: "home"
       <div class="container position-relative">
         <div class="row">
           <div class="col-lg-8">
+            <img src="{{ '/assets/img/pest-types.webp' | relative_url }}" alt="Common pests we eliminate: cockroaches, bed bugs, mice and rats, ants, earwigs and spiders, and wasps" class="hero-graphic img-fluid d-lg-none" width="1200" height="566">
             <h1>Same-Day Pest Control &amp; Exterminator Service in Chicago</h1>
             <p class="lead">Total Pest Control delivers guaranteed pest removal across Chicagoland and the suburbs, including bed bugs, termites, rodents, ants, roaches, spiders, bees, wasps, and wildlife. Child- and pet-safe treatments, affordable prices, and no contract required. You'll never have to worry about uninvited guests in your home again.</p>
             <div class="hero-actions d-flex flex-wrap gap-3">
-              <a href="tel:+17733383918" class="btn-main">Call Now: 773-338-3918</a>
+              <a href="tel:+17733383918" class="btn-main" data-bs-toggle="modal" data-bs-target="#callModal"><i class="bi bi-telephone-fill"></i> Call Now</a>
               <a href="{{ '/estimate/' | relative_url }}" class="btn-outline">Request Free Estimate <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -28,14 +29,14 @@ active_nav: "home"
         <div class="row hero-counters">
           <div class="col-6 col-lg-3">
             <div class="counter-item">
-              <h3><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>+</h3>
+              <h3><span data-purecounter-start="0" data-purecounter-end="31" data-purecounter-duration="1" class="purecounter"></span>+</h3>
               <p>Years of Pest Control Experience</p>
             </div>
           </div>
           <div class="col-6 col-lg-3">
             <div class="counter-item">
-              <h3><span data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-              <p>Infestations Eliminated</p>
+              <h3><span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>%</h3>
+              <p>Committed to Customer Satisfaction</p>
             </div>
           </div>
           <div class="col-6 col-lg-3">
@@ -47,7 +48,7 @@ active_nav: "home"
           <div class="col-6 col-lg-3">
             <div class="counter-item">
               <h3><span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span></h3>
-              <p>Days a Week with Same-Day Service</p>
+              <p>Days a Week Service</p>
             </div>
           </div>
         </div>
@@ -63,17 +64,13 @@ active_nav: "home"
 
         <div class="row gy-5 align-items-center">
 
-          <div class="col-lg-6">
-            <div class="about-gallery">
-              <div class="gallery-main">
-                <img src="{{ '/assets/img/pest-control-worker-in-front-yard.jpg' | relative_url }}" alt="Total Pest Control technician spraying a Chicago home" class="img-fluid" loading="lazy">
+          <div class="col-lg-6 align-self-lg-stretch">
+            <div class="about-gallery about-gallery-graphic">
+              <div class="gallery-main d-none d-lg-block">
+                <img src="{{ '/assets/img/pest-types.webp' | relative_url }}" alt="Common pests we eliminate: cockroaches, bed bugs, mice and rats, ants, earwigs and spiders, and wasps" class="img-fluid" width="1200" height="566" loading="lazy">
               </div>
-              <div class="gallery-secondary">
-                <img src="{{ '/assets/img/infestation-of-bugs.jpg' | relative_url }}" alt="Infestation of bugs within wood" class="img-fluid" loading="lazy">
-              </div>
-              <div class="experience-badge">
-                <span class="number">30+</span>
-                <span class="text">Years of<br>Experience</span>
+              <div class="gallery-insects">
+                <img src="{{ '/assets/img/insect-types.jpg' | relative_url }}" alt="Insects we treat, including carpenter bees, wasps, yellow jackets, hornets, crickets, cockroaches, silverfish, earwigs, centipedes, mosquitoes, fleas, spiders, bed bugs, carpenter ants, and carpet beetles" class="img-fluid" width="1200" height="450" loading="lazy">
               </div>
             </div>
           </div>
@@ -172,6 +169,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Insect Exterminator</h4>
                     <p>Even clean homes attract pests. Say goodbye to ants, roaches, fleas, spiders, mosquitoes, flies, centipedes, and silverfish with same-day insect extermination, available seven days a week, year-round.</p>
+                    <a href="{{ '/services/insect-exterminator/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Insect Extermination</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -184,6 +182,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Termite Control</h4>
                     <p>Trained and certified termite technicians provide complete residential and commercial inspections that detect activity, conducive conditions, and entry points, plus treatment programs that protect your property from future infestations.</p>
+                    <a href="{{ '/services/termite-control/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Termite Control</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -196,6 +195,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Bed Bug Extermination</h4>
                     <p>Our bed bug experts use advanced protocols and integrated pest management (IPM) methodologies to deliver the most effective, rapid bed bug removal, so you can sleep easy again, fast.</p>
+                    <a href="{{ '/services/bed-bug-extermination/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Bed Bug Extermination</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -208,6 +208,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Rodent, Mouse &amp; Rat Control</h4>
                     <p>Rodent droppings can carry disease. We eliminate mice and rats using tamper-resistant exterior bait stations and non-poisonous indoor methods that are safe for your family and pets, and tough on rodents.</p>
+                    <a href="{{ '/services/rodent-control/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Rodent Control</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -220,6 +221,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Wildlife Removal &amp; Control</h4>
                     <p>Noises in the attic at night? Squirrels, raccoons, opossums, or bats may have moved in. We humanely remove wildlife before they damage your home, belongings, or threaten your family.</p>
+                    <a href="{{ '/services/wildlife-removal/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Wildlife Removal</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -232,6 +234,7 @@ active_nav: "home"
                   <div class="service-body">
                     <h4>Bee &amp; Wasp Removal</h4>
                     <p>Our stinging-insect specialists safely remove bees, wasps, hornets, and yellow jackets, while our wasp-proofing service prevents nesting so you can enjoy your yard, deck, and pool all season long. Guaranteed.</p>
+                    <a href="{{ '/services/bee-wasp-removal/' | relative_url }}" class="service-link stretched-link">Learn More<span class="visually-hidden"> about Bee &amp; Wasp Removal</span> <i class="bi bi-arrow-right"></i></a>
                   </div>
                 </div>
               </div><!-- End Service -->
@@ -267,11 +270,11 @@ active_nav: "home"
               <div class="col-sm-6">
                 <div class="counter-card">
                   <div class="counter-icon">
-                    <i class="bi bi-bug"></i>
+                    <i class="bi bi-hand-thumbs-up"></i>
                   </div>
                   <div class="counter-data">
-                    <h3><span data-purecounter-start="0" data-purecounter-end="850" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                    <p>Pest Problems Solved</p>
+                    <h3><span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter"></span>%</h3>
+                    <p>Committed to Customer Satisfaction</p>
                   </div>
                 </div>
               </div><!-- End Counter -->
@@ -279,11 +282,11 @@ active_nav: "home"
               <div class="col-sm-6">
                 <div class="counter-card">
                   <div class="counter-icon">
-                    <i class="bi bi-emoji-smile"></i>
+                    <i class="bi bi-calendar-week"></i>
                   </div>
                   <div class="counter-data">
-                    <h3><span data-purecounter-start="0" data-purecounter-end="620" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                    <p>Satisfied Homeowners &amp; Businesses</p>
+                    <h3><span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span></h3>
+                    <p>Days a Week Service</p>
                   </div>
                 </div>
               </div><!-- End Counter -->
@@ -306,7 +309,7 @@ active_nav: "home"
                     <i class="bi bi-award"></i>
                   </div>
                   <div class="counter-data">
-                    <h3><span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>+</h3>
+                    <h3><span data-purecounter-start="0" data-purecounter-end="31" data-purecounter-duration="1" class="purecounter"></span>+</h3>
                     <p>Years of Trusted Service</p>
                   </div>
                 </div>
@@ -327,7 +330,7 @@ active_nav: "home"
       <!-- Section Title -->
       <div class="container section-title">
         <h2>How Our Pest Control Process Works</h2>
-        <p>From your first call to a pest-free home, a proven, four-step extermination process trusted across Chicago for over 30 years</p>
+        <p>From your first call to a pest-free home, a proven, four-step extermination process trusted across Chicago for over 31 years</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -641,15 +644,10 @@ active_nav: "home"
                   <span>Request a Free Estimate</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
-                <div class="phone-block">
-                  <div class="phone-icon">
-                    <i class="bi bi-telephone-fill"></i>
-                  </div>
-                  <div class="phone-details">
-                    <span class="phone-label">Speak with a Pest Expert</span>
-                    <a href="tel:+17733383918" class="phone-number">773-338-3918</a>
-                  </div>
-                </div>
+                <a href="tel:+17733383918" class="btn-call" data-bs-toggle="modal" data-bs-target="#callModal">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span>Call Now</span>
+                </a>
               </div>
 
             </div>
@@ -662,8 +660,8 @@ active_nav: "home"
               </div>
               <div class="counter-badge">
                 <div class="counter-inner">
-                  <span class="counter-value">850+</span>
-                  <span class="counter-text">Infestations Eliminated</span>
+                  <span class="counter-value">100%</span>
+                  <span class="counter-text">Committed to<br>Customer Satisfaction</span>
                 </div>
               </div>
               <div class="accent-badge">
@@ -679,63 +677,4 @@ active_nav: "home"
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Contact Total Pest Control Chicago</h2>
-        <p>Get a free pest control estimate today, with same-day service available across Chicago and the suburbs, seven days a week</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-cards">
-
-              <div class="info-card d-flex align-items-start gap-3">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div>
-                  <h4>Call Us Now</h4>
-                  <p><a href="tel:+17733383918">773-338-3918</a></p>
-                </div>
-              </div><!-- End Info Card -->
-
-              <div class="info-card d-flex align-items-start gap-3">
-                <div class="icon-box">
-                  <i class="bi bi-clock"></i>
-                </div>
-                <div>
-                  <h4>Hours</h4>
-                  <p>Open 7 Days a Week<br>Same-Day Service Available</p>
-                </div>
-              </div><!-- End Info Card -->
-
-              <div class="info-card d-flex align-items-start gap-3">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div>
-                  <h4>Service Area</h4>
-                  <p>Chicago, IL<br>Serving all of Chicagoland &amp; Suburbs</p>
-                </div>
-              </div><!-- End Info Card -->
-
-            </div>
-          </div>
-
-          <div class="col-lg-8">
-            <div class="contact-form-wrap">
-              {% include contact-form.html %}
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
+    {% include contact-section.html section_class="light-background" %}

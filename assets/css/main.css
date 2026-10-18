@@ -160,7 +160,7 @@ h6 {
 }
 
 .header .logo img {
-  height: 55px;
+  height: 77px;
   width: auto;
 }
 
@@ -182,20 +182,26 @@ h6 {
 
 .header .header-actions {
   margin: 0 16px;
+  gap: 12px;
 }
 
-.header .header-actions .action-link {
+.header .header-actions .btn-call {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  min-height: 44px;
+  padding: 10px 22px;
+  border: 2px solid var(--accent-color);
+  border-radius: 24px;
+  color: var(--accent-color);
   font-weight: 600;
-  color: var(--default-color);
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.header .header-actions .action-link i {
-  font-size: 18px;
-  color: var(--accent-color);
+.header .header-actions .btn-call:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
 }
 
 .header .btn-quote {
@@ -778,7 +784,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 60px 0;
-  scroll-margin-top: 88px;
+  scroll-margin-top: 110px;
   overflow: clip;
 }
 
@@ -885,6 +891,13 @@ section,
   color: var(--accent-color);
 }
 
+.hero .hero-graphic {
+  display: block;
+  width: 100%;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
+}
+
 .hero .lead {
   font-size: 18px;
   line-height: 1.6;
@@ -907,6 +920,7 @@ section,
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
 }
 
 .hero .hero-actions .btn-main:hover {
@@ -1007,6 +1021,76 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Call Modal
+--------------------------------------------------------------*/
+.call-modal .modal-content {
+  border: 0;
+  border-radius: 8px;
+}
+
+.call-modal .modal-header {
+  border-bottom: 0;
+  padding: 24px 24px 0;
+}
+
+.call-modal .modal-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.call-modal .modal-body {
+  padding: 16px 24px 24px;
+}
+
+.call-modal .modal-body p {
+  margin-bottom: 16px;
+}
+
+.call-modal .call-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 6px;
+  color: var(--heading-color);
+  transition: all 0.3s ease;
+}
+
+.call-modal .call-option:last-child {
+  margin-bottom: 0;
+}
+
+.call-modal .call-option i {
+  font-size: 20px;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+.call-modal .call-option strong {
+  display: block;
+  font-size: 16px;
+}
+
+.call-modal .call-option span span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.call-modal .call-option:hover,
+.call-modal .call-option:focus-visible {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.call-modal .call-option:hover i,
+.call-modal .call-option:focus-visible i {
+  color: var(--contrast-color);
+}
+
+/*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about .about-gallery {
@@ -1072,6 +1156,35 @@ section,
   text-align: center;
   line-height: 1.2;
 }
+
+/* Wide, transparent graphic: show it uncropped */
+.about .about-gallery.about-gallery-graphic {
+  padding: 0;
+  text-align: center;
+}
+
+.about .about-gallery.about-gallery-graphic .gallery-main {
+  border-radius: 0;
+  overflow: visible;
+}
+
+.about .about-gallery.about-gallery-graphic .gallery-main img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+}
+
+.about .about-gallery.about-gallery-graphic .gallery-insects {
+  margin-top: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.about .about-gallery.about-gallery-graphic .gallery-insects img {
+  width: 100%;
+}
+
 
 .about .about-content .section-label {
   display: inline-flex;
@@ -1431,6 +1544,25 @@ section,
 
 .stats .stats-content .stats-link:hover {
   gap: 12px;
+}
+
+.stats .stats-content .btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.stats .stats-content .btn-call:hover {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: translateY(-3px);
 }
 
 .stats .counter-card {
@@ -2179,48 +2311,29 @@ section,
   transform: translateX(5px);
 }
 
-.call-to-action .action-row .phone-block {
-  display: flex;
+.call-to-action .action-row .btn-call {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.call-to-action .action-row .phone-block .phone-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid color-mix(in srgb, var(--accent-color), transparent 50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.call-to-action .action-row .btn-call i {
+  font-size: 1.1rem;
   animation: phone-ring 2s ease-in-out infinite;
 }
 
-.call-to-action .action-row .phone-block .phone-icon i {
-  font-size: 1.1rem;
-  color: var(--accent-color);
-}
-
-.call-to-action .action-row .phone-block .phone-details .phone-label {
-  display: block;
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--default-color), transparent 45%);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 2px;
-}
-
-.call-to-action .action-row .phone-block .phone-details .phone-number {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--heading-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.call-to-action .action-row .phone-block .phone-details .phone-number:hover {
-  color: var(--accent-color);
+.call-to-action .action-row .btn-call:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
 }
 
 @keyframes phone-ring {
@@ -2402,6 +2515,71 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin: 0;
   line-height: 1.6;
+}
+
+.contact .info-cards .info-card .call-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact .info-cards .info-card .call-list li + li {
+  margin-top: 10px;
+}
+
+.contact .info-cards .info-card .call-list a {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading-color);
+  transition: color 0.3s ease;
+}
+
+.contact .info-cards .info-card .call-list a:hover {
+  color: var(--accent-color);
+}
+
+.contact .info-cards .info-card .call-list span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.contact .call-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 6px;
+}
+
+.contact .call-notice i {
+  font-size: 22px;
+  color: var(--accent-color);
+  line-height: 1.2;
+}
+
+.contact .call-notice strong {
+  display: block;
+  font-size: 16px;
+  color: var(--heading-color);
+  margin-bottom: 2px;
+}
+
+.contact .call-notice p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.contact .call-notice a {
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .contact .contact-form-wrap {
@@ -3167,6 +3345,25 @@ section,
   font-weight: 600;
   color: var(--heading-color);
   font-size: 15px;
+}
+
+.service-details .service-sidebar .contact-card .contact-info .btn-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.service-details .service-sidebar .contact-card .contact-info .btn-call:hover {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
 }
 
 .service-details .service-content .image-gallery {
@@ -4205,16 +4402,22 @@ section,
   border-left-color: #7ddc8a;
 }
 
-.call-to-action.dark-background .action-row .phone-block .phone-icon {
-  border-color: color-mix(in srgb, #7ddc8a, transparent 45%);
+.call-to-action.dark-background .action-row .btn-call {
+  border-color: var(--contrast-color);
+  color: var(--contrast-color);
 }
 
-.call-to-action.dark-background .action-row .phone-block .phone-icon i {
+.call-to-action.dark-background .action-row .btn-call i {
   color: #7ddc8a;
 }
 
-.call-to-action.dark-background .action-row .phone-block .phone-details .phone-number:hover {
-  color: #7ddc8a;
+.call-to-action.dark-background .action-row .btn-call:hover {
+  background: var(--contrast-color);
+  color: var(--accent-color);
+}
+
+.call-to-action.dark-background .action-row .btn-call:hover i {
+  color: var(--accent-color);
 }
 
 .call-to-action.dark-background .image-block .accent-badge i {

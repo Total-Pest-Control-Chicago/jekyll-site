@@ -155,49 +155,28 @@
       }
     }
 
-    .phone-block {
-      display: flex;
+    .btn-call {
+      display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
 
-      .phone-icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        border: 2px solid color-mix(in srgb, var(--accent-color), transparent 50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
+      i {
+        font-size: 1.1rem;
         animation: phone-ring 2s ease-in-out infinite;
-
-        i {
-          font-size: 1.1rem;
-          color: var(--accent-color);
-        }
       }
 
-      .phone-details {
-        .phone-label {
-          display: block;
-          font-size: 0.8rem;
-          color: color-mix(in srgb, var(--default-color), transparent 45%);
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-          margin-bottom: 2px;
-        }
-
-        .phone-number {
-          font-size: 1.15rem;
-          font-weight: 700;
-          color: var(--heading-color);
-          text-decoration: none;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: var(--accent-color);
-          }
-        }
+      &:hover {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        transform: translateY(-3px);
       }
     }
   }

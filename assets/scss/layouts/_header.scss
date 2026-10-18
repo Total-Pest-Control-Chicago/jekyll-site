@@ -34,18 +34,24 @@
 
   .header-actions {
     margin: 0 16px;
+    gap: 12px;
 
-    .action-link {
+    .btn-call {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-size: 14px;
+      min-height: 44px;
+      padding: 10px 22px;
+      border: 2px solid var(--accent-color);
+      border-radius: 24px;
+      color: var(--accent-color);
       font-weight: 600;
-      color: var(--default-color);
+      font-size: 14px;
+      transition: all 0.3s ease;
 
-      i {
-        font-size: 18px;
-        color: var(--accent-color);
+      &:hover {
+        background: var(--accent-color);
+        color: var(--contrast-color);
       }
     }
   }

@@ -65,6 +65,34 @@
         line-height: 1.2;
       }
     }
+
+    // Wide, transparent graphic: show it uncropped
+    &.about-gallery-graphic {
+      padding: 0;
+      text-align: center;
+
+      .gallery-main {
+        border-radius: 0;
+        overflow: visible;
+
+        img {
+          aspect-ratio: auto;
+          object-fit: contain;
+          filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
+        }
+      }
+
+      .gallery-insects {
+        margin-top: 24px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .about-content {
