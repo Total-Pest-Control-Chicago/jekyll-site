@@ -68,6 +68,8 @@
     window.addEventListener('load', () => {
       preloader.remove();
     });
+    // 'load' waits on every request, so one stalled request (e.g. livereload) would block the page forever
+    setTimeout(() => preloader.remove(), 3000);
   }
 
   /**

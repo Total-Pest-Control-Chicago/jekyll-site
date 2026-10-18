@@ -2,19 +2,32 @@
 
 Jekyll conversion of the New Total Pest Control website (Constructify Bootstrap template).
 
-- `jekyll build` to build it for hosting (output goes to `_site/`)
 - `jekyll serve` to build and listen for changes locally
-- Change the `_config.yml` based on prod or staging — `robots.txt` and `sitemap.xml` pick up `url` automatically:
 
-	# STAGING (example)
-	title: "Total Pest Control"
-	url: "https://<org>.github.io/total-pest-control-staging"
-	baseurl: "/total-pest-control-staging"
+## Building & Deploying
 
-	# PROD
-	title: "Total Pest Control"
-	url: "https://www.totalpestcontrol.us"
-	baseurl: "/"
+Run these from the `tpc-jekyll-site` folder. Both write the built site to `_site/`, replacing the previous build.
+
+**Prod**
+
+	jekyll build
+
+Copy the contents of `_site/` into the prod site repo.
+
+**Staging**
+
+	jekyll build --config _config.yml,_config_staging.yml
+
+Copy the contents of `_site/` into the `new-total-pest-control-website` repo.
+
+The staging command loads `_config.yml` first, then applies `_config_staging.yml` on top. That swaps in the staging `url`/`baseurl`, adds the `noindex` tag, and leaves out `sitemap.xml` and `robots.txt`.
+
+Copying a build over an existing repo doesn't remove files that are no longer part of the build. For the first staging deploy with this setup, delete the old `robots.txt` and `sitemap.xml` from the staging repo.
+
+## Sitemap & robots.txt
+
+- Prod only: `sitemap.xml` and `robots.txt` pick up `url` from `_config.yml` at build time
+- Staging builds leave out `sitemap.xml` and `robots.txt` and add `<meta name="robots" content="noindex, nofollow, noarchive">` to every page instead. A `robots.txt` in the staging subfolder would be ignored by search engines, since they only read it at the domain root
 
 ## Structure
 

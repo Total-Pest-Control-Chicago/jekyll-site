@@ -1,6 +1,6 @@
 title: "Total Pest Control"
-url: "https://total-pest-control-chicago.github.io"
-baseurl: "/new-total-pest-control-website"
+url: "https://www.totalpestcontrol.us"
+baseurl: "/"
 
 defaults:
   - scope:

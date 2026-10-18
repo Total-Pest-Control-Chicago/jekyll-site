@@ -135,6 +135,11 @@
       border-radius: 4px;
       min-height: 48px;
 
+      // iOS zooms in on focused fields with a font-size under 16px
+      @media (pointer: coarse) {
+        font-size: 16px;
+      }
+
       &:focus {
         border-color: var(--accent-color);
         box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 80%);

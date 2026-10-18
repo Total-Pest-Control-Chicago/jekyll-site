@@ -1,0 +1,13 @@
+# Staging overrides. Build with:
+#   jekyll build --config _config.yml,_config_staging.yml
+url: "https://total-pest-control-chicago.github.io"
+baseurl: "/new-total-pest-control-website"
+staging: true
+
+# Replaces (does not extend) the exclude list in _config.yml
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - sitemap.xml
+  - robots.txt
