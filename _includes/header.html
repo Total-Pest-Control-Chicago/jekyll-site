@@ -5,11 +5,12 @@
         <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Total Pest Control">
       </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <nav id="navmenu" class="navmenu" aria-label="Main">
+        <button type="button" class="mobile-nav-toggle d-lg-none bi bi-list" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu-list"></button>
+        <ul id="navmenu-list">
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
           <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-          <li class="dropdown"><a href="{{ '/services/' | relative_url }}"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="{{ '/services/' | relative_url }}"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown" aria-hidden="true"></i></a>
             <ul>
               <li><a href="{{ '/services/insect-exterminator/' | relative_url }}">Insect Exterminator</a></li>
               <li><a href="{{ '/services/termite-control/' | relative_url }}">Termite Control</a></li>
@@ -20,20 +21,19 @@
             </ul>
           </li>
           <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-          <li class="d-lg-none"><a class="btn-call-mobile" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal"><i class="bi bi-telephone-fill"></i> Call Now</a></li>
+          <li class="d-lg-none"><a class="btn-call-mobile" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal" aria-haspopup="dialog"><i class="bi bi-telephone-fill" aria-hidden="true"></i> Call Now</a></li>
           <li class="d-lg-none"><a class="btn-call-mobile" href="{{ '/estimate/' | relative_url }}">Free Estimate</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-lg-none bi bi-list"></i>
       </nav>
 
       <div class="header-actions d-none d-lg-flex align-items-center">
-        <a class="btn-call" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal"><i class="bi bi-telephone-fill"></i><span>Call Now</span></a>
+        <a class="btn-call" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal" aria-haspopup="dialog"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>Call Now</span></a>
         <a class="btn-quote d-none d-sm-inline-flex" href="{{ '/estimate/' | relative_url }}">Get Free Estimate</a>
       </div>
 
       
 
-      <a class="btn-call-header d-lg-none" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal"><i class="bi bi-telephone-fill"></i><span>Call Now</span></a>
+      <a class="btn-call-header d-lg-none" href="tel:+17733383918" data-bs-toggle="modal" data-bs-target="#callModal" aria-haspopup="dialog"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>Call Now</span></a>
 
     </div>
   </header>

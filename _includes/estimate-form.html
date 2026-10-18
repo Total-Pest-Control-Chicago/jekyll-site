@@ -3,16 +3,20 @@
                 <input type="hidden" name="_subject" value="New Total Pest Control free estimate request">
                 <div class="row gy-4">
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" autocomplete="name">
+                    <label for="estimate-name" class="visually-hidden">Your name</label>
+                    <input type="text" id="estimate-name" name="name" class="form-control" placeholder="Your Name" required="" autocomplete="name">
                   </div>
                   <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="" autocomplete="email">
+                    <label for="estimate-email" class="visually-hidden">Your email</label>
+                    <input type="email" id="estimate-email" name="email" class="form-control" placeholder="Your Email" required="" autocomplete="email">
                   </div>
                   <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" autocomplete="tel">
+                    <label for="estimate-phone" class="visually-hidden">Phone number (optional)</label>
+                    <input type="tel" id="estimate-phone" name="phone" class="form-control" placeholder="Phone Number" autocomplete="tel">
                   </div>
                   <div class="col-md-6">
-                    <select name="service" class="form-control" required="">
+                    <label for="estimate-service" class="visually-hidden">Pest problem</label>
+                    <select id="estimate-service" name="service" class="form-control" required="">
                       <option value="" disabled="" selected="">Select a Pest Problem</option>
                       <option value="insects">Ants, Roaches &amp; Other Insects</option>
                       <option value="bed-bugs">Bed Bugs</option>
@@ -24,7 +28,8 @@
                     </select>
                   </div>
                   <div class="col-12">
-                    <textarea name="message" class="form-control" rows="5" placeholder="Describe your pest problem, including what you've seen, where, and for how long... (optional)"></textarea>
+                    <label for="estimate-message" class="visually-hidden">Message (optional)</label>
+                    <textarea id="estimate-message" name="message" class="form-control" rows="5" placeholder="Describe your pest problem, including what you've seen, where, and for how long... (optional)"></textarea>
                   </div>
                   <div class="col-12">
                     <button type="submit" class="btn-submit">Get My Free Estimate</button>

@@ -4,10 +4,12 @@
   {% include head.html %}
 <body class="{{ page.body_class | default: 'index-page' }}">
 
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to main content</a>
+
   {% unless page.show_header == false %}
     {% include header.html %}
   {% endunless %}
-  <main class="main">
+  <main id="main" class="main" tabindex="-1">
 {{ content }}
   </main>
 

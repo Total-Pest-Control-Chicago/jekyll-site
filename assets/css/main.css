@@ -75,7 +75,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--accent-color), black 20%);
   text-decoration: none;
 }
 
@@ -403,7 +403,8 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover>ul,
+  .navmenu .dropdown:focus-within>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -412,6 +413,9 @@ h6 {
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
+    background: none;
+    border: 0;
+    padding: 0;
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
@@ -494,7 +498,8 @@ h6 {
     transition: all 0.5s ease-in-out;
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown>.dropdown-active,
+  .navmenu .dropdown:has(:focus-visible)>ul {
     display: block;
     background-color: color-mix(in srgb, var(--accent-color) 6%, transparent);
   }
@@ -600,7 +605,7 @@ h6 {
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -1244,7 +1249,7 @@ section,
 
 .about .about-highlights .highlight-item p {
   font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   line-height: 1.5;
   margin: 0;
 }
@@ -1610,7 +1615,7 @@ section,
 
 .stats .counter-card .counter-data p {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin: 4px 0 0;
 }
 
@@ -1824,7 +1829,7 @@ section,
 .process .process-step .step-number {
   font-size: 56px;
   font-weight: 800;
-  color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: color-mix(in srgb, var(--accent-color), transparent 30%);
   line-height: 1;
   margin-bottom: 16px;
   font-family: var(--heading-font);
@@ -2087,6 +2092,18 @@ section,
   color: var(--accent-color);
 }
 
+.faq .faq-item .faq-question {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
 .faq .faq-item .faq-content {
   display: grid;
   grid-template-rows: 0fr;
@@ -2198,7 +2215,7 @@ section,
 .call-to-action .info-block>p {
   font-size: 1.05rem;
   line-height: 1.75;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 30px;
 }
 
@@ -2262,7 +2279,7 @@ section,
 
 .call-to-action .highlight-cards .highlight-card .card-body-content p {
   font-size: 0.9rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin: 0;
   line-height: 1.5;
 }
@@ -2545,7 +2562,7 @@ section,
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .contact .call-notice {
@@ -2598,7 +2615,7 @@ section,
   background-color: var(--surface-color);
   /* 16px minimum: iOS zooms in on focused fields with a smaller font-size */
   font-size: 16px;
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 40%);
   padding: 12px 16px;
   border-radius: 4px;
   min-height: 48px;
@@ -2618,7 +2635,7 @@ section,
 .contact .contact-form-wrap input[type=tel]::placeholder,
 .contact .contact-form-wrap select::placeholder,
 .contact .contact-form-wrap textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .contact .contact-form-wrap textarea {
@@ -2747,7 +2764,7 @@ section,
 .project-details .detail-tabs .nav-tabs .nav-link {
   border: none;
   border-bottom: 2px solid transparent;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   font-size: 14px;
   font-weight: 600;
   padding: 12px 20px;
@@ -2902,7 +2919,7 @@ section,
 .project-details .sticky-sidebar .specs-card .spec-item .spec-label {
   display: block;
   font-size: 12px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-top: 4px;
@@ -2987,7 +3004,7 @@ section,
 
 .project-details .sticky-sidebar .client-card ul li .label {
   font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 45%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .project-details .sticky-sidebar .client-card ul li .value {
@@ -3028,7 +3045,7 @@ section,
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
 }
 
 .project-details .bottom-nav .btn-nav .btn-text .btn-title {
@@ -3337,7 +3354,7 @@ section,
 .service-details .service-sidebar .contact-card .contact-info .info-row div span {
   display: block;
   font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 4px;
 }
 
@@ -3417,7 +3434,9 @@ section,
 }
 
 .service-details .service-content .image-gallery .service-details-slider .swiper-button-next:hover,
-.service-details .service-content .image-gallery .service-details-slider .swiper-button-prev:hover {
+.service-details .service-content .image-gallery .service-details-slider .swiper-button-prev:hover,
+.service-details .service-content .image-gallery .service-details-slider .swiper-button-next:focus-visible,
+.service-details .service-content .image-gallery .service-details-slider .swiper-button-prev:focus-visible {
   opacity: 1;
 }
 
@@ -3614,7 +3633,7 @@ section,
 }
 
 .terms-of-service .tos-header p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -3856,7 +3875,7 @@ section,
 }
 
 .terms-of-service .tos-contact .contact-box .contact-content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 15px;
 }
 
@@ -3910,7 +3929,7 @@ section,
 
 .privacy .privacy-header .header-content .last-updated {
   font-size: 0.95rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 20px;
 }
 
@@ -4179,7 +4198,7 @@ section,
 
 .error-404 .error-info p {
   font-size: 1.05rem;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
   margin-bottom: 1.5rem;
   line-height: 1.7;
 }
@@ -4448,4 +4467,88 @@ section,
 
 .call-to-action.dark-background .action-row .btn-get-started {
   box-shadow: 0 10px 30px color-mix(in srgb, #000000, transparent 65%);
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+.skip-link:focus {
+  position: fixed !important;
+  top: 12px;
+  left: 12px;
+  z-index: 100000;
+  padding: 12px 20px;
+  border-radius: 4px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.dark-background a:focus-visible,
+.dark-background button:focus-visible,
+.dark-background [role="button"]:focus-visible,
+.dark-background [tabindex]:focus-visible {
+  outline-color: var(--contrast-color);
+}
+
+/* Links inside running text need more than color to stand out (WCAG 1.4.1) */
+p a:not([class]) {
+  text-decoration: underline;
+}
+
+/* Space pagination bullets so each has a 24px target (WCAG 2.5.8) */
+.swiper-pagination {
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+}
+
+.swiper-autoplay-toggle {
+  position: absolute;
+  left: 12px;
+  bottom: 8px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  background: var(--contrast-color);
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.testimonials .swiper-autoplay-toggle {
+  left: 0;
+  bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

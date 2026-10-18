@@ -28,13 +28,25 @@
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
+    const isOpen = document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
+    mobileNavToggleBtn.setAttribute('aria-expanded', isOpen);
+    mobileNavToggleBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   }
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
+
+  /**
+   * Close the mobile nav with Escape and return focus to the toggle
+   */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.querySelector('.mobile-nav-active')) {
+      mobileNavToogle();
+      mobileNavToggleBtn.focus();
+    }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -138,18 +150,52 @@
   /**
    * Init swiper sliders
    */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
+      // Don't auto-advance slides for visitors who have asked for reduced motion
+      if (config.autoplay && prefersReducedMotion) {
+        delete config.autoplay;
+      }
+
       if (swiperElement.classList.contains("swiper-tab")) {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
-        new Swiper(swiperElement, config);
+        let swiper = new Swiper(swiperElement, config);
+        if (config.autoplay) {
+          addAutoplayToggle(swiperElement, swiper);
+        }
       }
     });
+  }
+
+  /**
+   * Pause/play button for auto-advancing sliders (WCAG 2.2.2 Pause, Stop, Hide)
+   */
+  function addAutoplayToggle(swiperElement, swiper) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'swiper-autoplay-toggle';
+
+    function update() {
+      const running = swiper.autoplay.running && !swiper.autoplay.paused;
+      button.setAttribute('aria-label', running ? 'Pause slideshow' : 'Play slideshow');
+      button.innerHTML = '<i class="bi ' + (running ? 'bi-pause-fill' : 'bi-play-fill') + '" aria-hidden="true"></i>';
+    }
+
+    button.addEventListener('click', () => {
+      swiper.autoplay.running ? swiper.autoplay.stop() : swiper.autoplay.start();
+      update();
+    });
+    swiper.on('autoplayStart autoplayStop', update);
+
+    swiperElement.appendChild(button);
+    update();
   }
 
   window.addEventListener("load", initSwiper);
@@ -157,9 +203,11 @@
   /**
    * Frequently Asked Questions Toggle
    */
-  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle, .faq-item .faq-header').forEach((faqItem) => {
-    faqItem.addEventListener('click', () => {
-      faqItem.parentNode.classList.toggle('faq-active');
+  document.querySelectorAll('.faq-item .faq-question, .faq-item .faq-toggle').forEach((faqTrigger) => {
+    faqTrigger.addEventListener('click', () => {
+      const faqItem = faqTrigger.closest('.faq-item');
+      const isOpen = faqItem.classList.toggle('faq-active');
+      faqItem.querySelector('.faq-question').setAttribute('aria-expanded', isOpen);
     });
   });
 
