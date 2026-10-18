@@ -2596,22 +2596,12 @@ section,
 .contact .contact-form-wrap textarea {
   color: var(--default-color);
   background-color: var(--surface-color);
-  font-size: 14px;
+  /* 16px minimum: iOS zooms in on focused fields with a smaller font-size */
+  font-size: 16px;
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   padding: 12px 16px;
   border-radius: 4px;
   min-height: 48px;
-}
-
-/* iOS zooms in on focused fields with a font-size under 16px */
-@media (pointer: coarse) {
-  .contact .contact-form-wrap input[type=text],
-  .contact .contact-form-wrap input[type=email],
-  .contact .contact-form-wrap input[type=tel],
-  .contact .contact-form-wrap select,
-  .contact .contact-form-wrap textarea {
-    font-size: 16px;
-  }
 }
 
 .contact .contact-form-wrap input[type=text]:focus,
